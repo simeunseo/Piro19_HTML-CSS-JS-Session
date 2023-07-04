@@ -4,7 +4,14 @@
   --color-green: #4dff53;
 }
 
-/* Pretendard 적용할것 */
+/* 기본 폰트 */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 
 /* 제목 폰트 */
 @font-face {
@@ -20,6 +27,8 @@
   padding: 0;
   color: white;
   box-sizing: border-box;
+
+  font-family: "Pretendard-Regular";
 }
 
 body {
