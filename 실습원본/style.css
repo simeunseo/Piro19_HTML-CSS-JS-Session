@@ -92,6 +92,20 @@ h1 {
   align-items: center;
 }
 
+.calendar > li > .today {
+  background-color: var(--color-green);
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+}
+
 /* main */
 
 main > h2 {
@@ -124,6 +138,7 @@ main > h2 > button {
   gap: 10px;
 
   padding: 10px 5px;
+  width: max-content;
 
   cursor: pointer;
 }
@@ -139,12 +154,12 @@ main > h2 > button {
   background-size: cover;
 }
 
-.list-container > li.checked {
+.list-container > li > .checked {
   color: var(--color-dark-grey);
   text-decoration: line-through;
 }
 
-.list-container > li.checked::before {
+.list-container > li > .checked::before {
   content: "";
 
   display: flex; /* inline 에는 height와 width를 줄 수 없음 */
