@@ -110,6 +110,8 @@ main > h2 {
 
   width: max-content;
   padding: 8px 10px;
+  margin-bottom: 10px;
+
   border-radius: 20px;
 }
 

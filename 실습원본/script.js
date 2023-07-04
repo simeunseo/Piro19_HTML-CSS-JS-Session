@@ -21,6 +21,8 @@ function addTask() {
 
   // 기존의 input 태그와 button 태그를 제거한다.
   listContainer.removeChild(input.parentNode);
+
+  saveData();
 }
 
 // + 버튼을 클릭하면 입력창을 만들어주는 함수
@@ -47,3 +49,13 @@ function createInput() {
   // listContainer의 자식으로 li 태그를 넣는다.
   listContainer.appendChild(li);
 }
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
