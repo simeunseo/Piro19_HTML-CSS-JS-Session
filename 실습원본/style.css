@@ -124,6 +124,8 @@ main > h2 > button {
   width: 18px;
   height: 18px;
 
+  margin-left: 5px;
+
   cursor: pointer;
 }
 
@@ -150,12 +152,7 @@ main > h2 > button {
   background-size: cover;
 }
 
-#list-container > li > .checked {
-  color: var(--color-dark-grey);
-  text-decoration: line-through;
-}
-
-#list-container > li > .checked::before {
+#list-container > li.checked::before {
   content: "";
 
   display: flex; /* inline 에는 height와 width를 줄 수 없음 */

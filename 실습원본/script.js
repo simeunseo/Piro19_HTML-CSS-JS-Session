@@ -1,5 +1,8 @@
 const listContainer = document.getElementById("list-container");
 
+let todoNum = localStorage.getItem("todoNum");
+const todayTodoNum = document.getElementById("today");
+
 // input에 입력한 할일을 추가하고 기존의 input창과 버튼은 삭제해주는 함수
 function addTask() {
   // li 태그를 만든다.
@@ -50,12 +53,29 @@ function createInput() {
   listContainer.appendChild(li);
 }
 
+listContainer.addEventListener("click", function (e) {
+  if (e.target.tagName === "LI") {
+    e.target.classList.value === "" ? todoNum++ : todoNum--; //한 일 수 처리
+    todayTodoNum.innerText = todoNum;
+
+    e.target.classList.toggle("checked");
+
+    saveData();
+  }
+  //   }else if (e.target.tagName === "SPAN") {
+  //     e.target.parentElement.remove();
+  //     saveData();
+  //   }
+});
+
 function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
+  localStorage.setItem("todoNum", todayTodoNum.innerText);
 }
 
 function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
+  todayTodoNum.innerText = localStorage.getItem("todoNum");
 }
 
 showTask();
