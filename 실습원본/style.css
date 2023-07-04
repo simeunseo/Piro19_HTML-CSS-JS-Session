@@ -42,7 +42,7 @@ body {
   width: 375px;
   height: 100%;
 
-  padding: 10px 20px;
+  padding: 20px 25px;
 
   background-color: black;
 }
@@ -53,6 +53,46 @@ h1 {
 
   margin-bottom: 50px;
 }
+
+/* calendar */
+.calendar {
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+}
+
+.calendar > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.calendar > li > h2 {
+  font-size: 12px;
+}
+
+.calendar > li > span {
+  font-size: 12px;
+}
+
+.calendar > li > span:nth-child(2) {
+  width: 20px;
+  height: 20px;
+
+  background-image: url(images/todo_icon.svg);
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* main */
 
 main > h2 {
   font-size: 16px;
@@ -77,16 +117,18 @@ main > h2 > button {
   cursor: pointer;
 }
 
-ul > li {
+.list-container > li {
   list-style: none;
 
   display: flex;
   gap: 10px;
 
   padding: 10px 5px;
+
+  cursor: pointer;
 }
 
-ul > li::before {
+.list-container > li::before {
   content: "";
 
   display: flex; /* inline 에는 height와 width를 줄 수 없음 */
@@ -97,12 +139,12 @@ ul > li::before {
   background-size: cover;
 }
 
-ul > li.checked {
+.list-container > li.checked {
   color: var(--color-dark-grey);
   text-decoration: line-through;
 }
 
-ul > li.checked::before {
+.list-container > li.checked::before {
   content: "";
 
   display: flex; /* inline 에는 height와 width를 줄 수 없음 */
