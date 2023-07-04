@@ -12,20 +12,24 @@ function addTask() {
   var input = document.getElementById("task-input");
   var task = input.value;
 
-  // span 태그를 만들고 내용을 사용자가 입력한 task로 채운다.
-  var span = document.createElement("span");
-  span.innerText = task;
+  if (task === "") {
+    alert("할 일을 적어주세요.");
+  } else {
+    // span 태그를 만들고 내용을 사용자가 입력한 task로 채운다.
+    var span = document.createElement("span");
+    span.innerText = task;
 
-  // li 태그의 자식으로 span 태그를 넣는다.
-  li.appendChild(span);
+    // li 태그의 자식으로 span 태그를 넣는다.
+    li.appendChild(span);
 
-  // listContainer의 자식으로 li 태그를 넣는다.
-  listContainer.appendChild(li);
+    // listContainer의 자식으로 li 태그를 넣는다.
+    listContainer.appendChild(li);
 
-  // 기존의 input 태그와 button 태그를 제거한다.
-  listContainer.removeChild(input.parentNode);
+    // 기존의 input 태그와 button 태그를 제거한다.
+    listContainer.removeChild(input.parentNode);
 
-  saveData();
+    saveData();
+  }
 }
 
 // + 버튼을 클릭하면 입력창을 만들어주는 함수
