@@ -75,7 +75,7 @@ function saveData() {
 
 function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
-  todayTodoNum.innerText = localStorage.getItem("todoNum");
+  todayTodoNum.innerText = localStorage.getItem("todoNum") | 0;
 }
 
 showTask();

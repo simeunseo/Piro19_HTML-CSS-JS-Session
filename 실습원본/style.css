@@ -86,7 +86,7 @@ h1 {
   align-items: center;
 }
 
-.calendar > li > .today {
+.calendar > li > #today {
   background-color: var(--color-green);
   padding: 5px;
   width: 20px;
