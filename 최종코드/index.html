@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIROMATE</title>
+    <link rel="icon" href="./images/todo_icon_fill.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>piro mate</h1>
+      <ol id="calendar">
+        <li>
+          <h2>월</h2>
+          <time>3</time>
+          <span>3</span>
+        </li>
+        <li>
+          <h2>화</h2>
+          <time>4</time>
+          <span>3</span>
+        </li>
+        <li>
+          <h2>수</h2>
+          <time>5</time>
+          <span>3</span>
+        </li>
+        <li>
+          <h2>목</h2>
+          <time>6</time>
+          <span id="today">0</span>
+        </li>
+        <li>
+          <h2>금</h2>
+          <time>7</time>
+          <span>3</span>
+        </li>
+        <li>
+          <h2>토</h2>
+          <time>8</time>
+          <span>3</span>
+        </li>
+        <li>
+          <h2>일</h2>
+          <time>9</time>
+          <span>3</span>
+        </li>
+      </ol>
+      <main>
+        <h2>
+          동아리<button type="button" id="addTask-btn"><small>+</small></button>
+        </h2>
+        <ul id="list-container">
+          <!-- <li>할일 1</li>
+          <li class="checked">할일 2</li>
+          <li>
+            <input type="text" placeholder="할일을 입력해주세요." /><button
+              type="button"
+            >
+              +
+            </button>
+          </li> -->
+        </ul>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
